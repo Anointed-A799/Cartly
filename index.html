@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cartly is a luxury-minimalist Nigerian marketplace for fashion, electronics, home essentials and everyday essentials."
+    />
+    <title>Cartly | Modern Nigerian marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <div class="container announcement-inner">
+        <span>Free delivery on orders over ₦25,000 in Lagos,Abuja and Port-Harcourt</span>
+        <span>New luxury arrivals every Friday</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a href="#top" class="brand" aria-label="Cartly home page">
+          <img
+            src="https://res.cloudinary.com/i8jrmtyw/image/upload/v1791577594/download.png"
+            alt="Cartly logo"
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#catalog">Explore</a>
+          <a href="#categories">Categories</a>
+          <a href="#stores">Stores</a>
+          <a href="#orders">History</a>
+          <a href="#newsletter">Journal</a>
+        </nav>
+
+        <div class="header-tools">
+          <form class="search-form" id="headerSearchForm" aria-label="Search for products">
+            <label class="sr-only" for="headerSearchInput">Search products</label>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6"></circle>
+              <path d="M16 16L21 21"></path>
+            </svg>
+            <input id="headerSearchInput" type="search" placeholder="Search products" />
+          </form>
+
+          <button class="icon-button wishlist-button" type="button" aria-label="Open wishlist" data-panel="wishlistPanel">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7.5-4.35-9.33-8.44C1.3 10.18 2.27 6 6.29 6c2.03 0 3.2 1.01 3.71 2.02C10.51 7.01 11.68 6 13.71 6c4.02 0 4.99 4.18 3.62 6.56C19.5 16.65 12 21 12 21Z"></path>
+            </svg>
+            <span class="count-badge" id="wishlistCount">0</span>
+          </button>
+
+          <button class="icon-button cart-button" type="button" aria-label="Open cart" data-panel="cartDrawer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h2l2.4 9.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.75L19 7H7"></path>
+              <circle cx="10" cy="18.5" r="1.5"></circle>
+              <circle cx="17" cy="18.5" r="1.5"></circle>
+            </svg>
+            <span class="count-badge" id="cartCount">0</span>
+          </button>
+          <button
+            class="icon-button theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            title="Switch to dark mode"
+          >
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path>
+            </svg>
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <div id="storefrontContent">
+      <section class="hero container reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Curated for modern Nigerian living</p>
+          <h1>Luxury essentials for everyday life.</h1>
+          <p class="hero-text">
+            Discover premium fashion, beauty, home finds and tech from trusted vendors across Nigeria.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#catalog">Shop now</a>
+            <a class="button secondary" href="#stores">Meet the sellers</a>
+          </div>
+
+          <ul class="hero-highlights" aria-label="Store benefits">
+            <li>Trusted vendors</li>
+            <li>Nationwide delivery</li>
+            <li>Easy checkout</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Featured shopping lifestyle image">
+          <div class="hero-card hero-card-main">
+            <img
+              src="https://res.cloudinary.com/i8jrmtyw/image/upload/v1791581708/Style_Your_Everyday__Fashion_Home.png"
+              alt="Elegant Nigerian lifestyle with fashion and home accessories"
+            />
+          </div>
+          <div class="floating-tag floating-tag-top">
+            <strong>New Season</strong>
+            <span>Spring drop</span>
+          </div>
+          <div class="floating-tag floating-tag-bottom">
+            <strong>4.9</strong>
+            <span>Average rating</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories container reveal" id="categories">
+        <div class="section-heading">
+          <p class="eyebrow">Shop by category</p>
+          <h2>Browse the essentials</h2>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card" type="button" data-category="Fashion">
+            <span class="category-icon">✦</span>
+            <span class="category-name">Fashion</span>
+          </button>
+          <button class="category-card" type="button" data-category="Electronics">
+            <span class="category-icon">▣</span>
+            <span class="category-name">Electronics</span>
+          </button>
+          <button class="category-card" type="button" data-category="Home and living">
+            <span class="category-icon">⌂</span>
+            <span class="category-name">Home & Living</span>
+          </button>
+          <button class="category-card" type="button" data-category="Beauty">
+            <span class="category-icon">◌</span>
+            <span class="category-name">Beauty</span>
+          </button>
+          <button class="category-card" type="button" data-category="Accessories">
+            <span class="category-icon">◍</span>
+            <span class="category-name">Accessories</span>
+          </button>
+          <button class="category-card" type="button" data-category="Groceries">
+            <span class="category-icon">◐</span>
+            <span class="category-name">Groceries</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="product-section container reveal" aria-labelledby="featured-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Curated picks</p>
+            <h2 id="featured-title">Featured products</h2>
+          </div>
+          <a href="#catalog" class="text-link">View all</a>
+        </div>
+        <div class="product-grid" id="featuredProducts"></div>
+      </section>
+
+      <section class="product-section container reveal" aria-labelledby="trending-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Popular this week</p>
+            <h2 id="trending-title">Trending products</h2>
+          </div>
+          <a href="#catalog" class="text-link">See more</a>
+        </div>
+        <div class="product-grid" id="trendingProducts"></div>
+      </section>
+
+      <section class="product-section container reveal" aria-labelledby="new-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Fresh finds</p>
+            <h2 id="new-title">New arrivals</h2>
+          </div>
+          <a href="#catalog" class="text-link">Browse</a>
+        </div>
+        <div class="product-grid" id="newProducts"></div>
+      </section>
+
+      <section class="promo-panel container reveal" aria-labelledby="promo-heading">
+        <div class="promo-copy">
+          <p class="eyebrow">This weekend only</p>
+          <h2 id="promo-heading">Upgrade your everyday essentials.</h2>
+          <p>Save up to 35% on home, beauty and accessory bundles chosen for the modern Nigerian home.</p>
+          <a href="#catalog" class="button primary">Explore the sale</a>
+        </div>
+        <div class="promo-visual" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+            alt="Minimal home lifestyle decor"
+          />
+        </div>
+      </section>
+
+      <section class="catalog-section container reveal" id="catalog">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Marketplace</p>
+            <h2>Shop everything</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Product carousel controls">
+            <button class="carousel-button" id="catalogPrevious" type="button" aria-label="Show previous products" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <button class="carousel-button" id="catalogNext" type="button" aria-label="Show next products">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="filter-buttons" id="catalogFilters" aria-label="Filter by category">
+            <button class="filter-chip active" type="button" data-category="all">All</button>
+            <button class="filter-chip" type="button" data-category="Fashion">Fashion</button>
+            <button class="filter-chip" type="button" data-category="Electronics">Electronics</button>
+            <button class="filter-chip" type="button" data-category="Home and living">Home & Living</button>
+            <button class="filter-chip" type="button" data-category="Beauty">Beauty</button>
+            <button class="filter-chip" type="button" data-category="Accessories">Accessories</button>
+            <button class="filter-chip" type="button" data-category="Groceries">Groceries</button>
+          </div>
+
+          <div class="sort-bar">
+            <label for="sortSelect">Sort by</label>
+            <select id="sortSelect">
+              <option value="popular">Popular</option>
+              <option value="newest">Newest</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+            </select>
+            <button class="button secondary small" id="clearFilters" type="button">Clear filters</button>
+          </div>
+        </div>
+
+        <div class="catalog-carousel" id="catalogGrid" role="region" aria-label="Marketplace products" tabindex="0" aria-live="polite"></div>
+        <div class="empty-state hidden" id="catalogEmptyState">
+          <h3>No products match your search</h3>
+          <p>Try a different keyword or remove one of the filters.</p>
+        </div>
+      </section>
+
+      <section class="stores-section container reveal" id="stores">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Trusted stores</p>
+            <h2>Featured seller stores</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Seller carousel controls">
+            <button class="carousel-button" id="sellerPrevious" type="button" aria-label="Show previous stores" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <button class="carousel-button" id="sellerNext" type="button" aria-label="Show next stores">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="seller-carousel" id="sellerGrid" role="region" aria-label="Featured seller stores" tabindex="0"></div>
+      </section>
+
+      <section class="newsletter container reveal" id="newsletter">
+        <div class="newsletter-content">
+          <p class="eyebrow">Cartly Journal</p>
+          <h2>Get style updates and first access to new arrivals.</h2>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <label class="sr-only" for="newsletterEmail">Email address</label>
+          <input id="newsletterEmail" type="email" placeholder="Your email address" required />
+          <button class="button primary" type="submit">Join now</button>
+        </form>
+      </section>
+      </div>
+
+      <section class="page-view container hidden" id="orderHistoryPage" aria-labelledby="orderHistoryTitle">
+        <p class="eyebrow">Your Cartly account</p>
+        <h1 id="orderHistoryTitle">Order history</h1>
+        <p class="page-intro">View your previous demo orders and their saved summaries.</p>
+        <div id="orderHistoryList" class="order-history-list"></div>
+        <button class="button secondary" type="button" data-page="home">Continue shopping</button>
+      </section>
+
+      <section class="page-view container hidden" id="orderConfirmationPage" aria-labelledby="confirmationTitle">
+        <div class="confirmation-card">
+          <div class="confirmation-icon" aria-hidden="true">✓</div>
+          <p class="eyebrow">Demo order placed</p>
+          <h1 id="confirmationTitle">Thank you for your order.</h1>
+          <p id="confirmationMessage" class="page-intro"></p>
+          <div id="confirmationOrderSummary" class="confirmation-summary"></div>
+          <p class="demo-note">This is a frontend demonstration. No real order was processed and no payment was made.</p>
+          <div class="hero-actions">
+            <button class="button primary" id="trackLatestOrder" type="button">Track my order</button>
+            <button class="button secondary" type="button" data-page="home">Continue shopping</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#top" class="brand footer-brand" aria-label="Cartly home page">
+            <img
+              src="https://res.cloudinary.com/i8jrmtyw/image/upload/v1791577594/download.png"
+              alt="Cartly logo"
+              class="brand-logo"
+            />
+          </a>
+          <p>
+           Your market, made modern. Quality goods from sellers you can trust, delivered across Nigeria.
+          </p>
+        </div>
+
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#top">About us</a></li>
+            <li><a href="#catalog">Shop</a></li>
+            <li><a href="#stores">Stores</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#top">Contact</a></li>
+            <li><a href="#top">Shipping</a></li>
+            <li><a href="#top">Returns</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#top">Privacy</a></li>
+            <li><a href="#top">Terms</a></li>
+            <li><a href="#top">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Cartly. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <aside class="side-panel" id="wishlistPanel" aria-label="Wishlist">
+      <div class="panel-header">
+        <h2>Wishlist</h2>
+        <button class="icon-close" type="button" data-close="wishlistPanel" aria-label="Close wishlist">×</button>
+      </div>
+      <div id="wishlistItems" class="panel-list"></div>
+    </aside>
+
+    <aside class="side-panel cart-panel" id="cartDrawer" aria-label="Shopping cart">
+      <div class="panel-header">
+        <h2>Your cart</h2>
+        <button class="icon-close" type="button" data-close="cartDrawer" aria-label="Close cart">×</button>
+      </div>
+
+      <div id="cartItems" class="panel-list cart-list"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">₦0</strong>
+        </div>
+        <div class="summary-row">
+          <span>Delivery</span>
+          <strong id="cartDelivery">₦0</strong>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <strong id="cartTotal">₦0</strong>
+        </div>
+        <button class="button primary wide" id="checkoutButton" type="button">Proceed to checkout</button>
+        <button class="button secondary wide" id="continueShopping" type="button">Continue shopping</button>
+      </div>
+    </aside>
+
+    <div class="modal-backdrop hidden" id="productModalBackdrop">
+      <div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="icon-close modal-close" type="button" aria-label="Close product details">×</button>
+        <div class="modal-content" id="productModalContent"></div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="checkoutBackdrop">
+      <div class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <button class="icon-close modal-close" type="button" data-close="checkoutBackdrop" aria-label="Close checkout">×</button>
+        <div class="checkout-header">
+          <p class="eyebrow">Checkout</p>
+          <h2 id="checkoutTitle">Delivery details</h2>
+        </div>
+
+        <form id="checkoutForm" novalidate>
+          <div class="checkout-grid">
+            <div>
+              <label for="customerName">Customer name</label>
+              <input id="customerName" name="customerName" type="text" placeholder="e.g. Ada Okafor" required />
+            </div>
+            <div>
+              <label for="phoneNumber">Phone number</label>
+              <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="0803 000 0000" required />
+            </div>
+            <div>
+              <label for="stateName">State</label>
+              <select id="stateName" name="stateName" aria-describedby="locationStatus" required>
+                <option value="">Select state</option>
+                <option value="Abia">Abia</option>
+                <option value="Adamawa">Adamawa</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Anambra">Anambra</option>
+                <option value="Bauchi">Bauchi</option>
+                <option value="Bayelsa">Bayelsa</option>
+                <option value="Benue">Benue</option>
+                <option value="Borno">Borno</option>
+                <option value="Cross River">Cross River</option>
+                <option value="Delta">Delta</option>
+                <option value="Ebonyi">Ebonyi</option>
+                <option value="Edo">Edo</option>
+                <option value="Ekiti">Ekiti</option>
+                <option value="Enugu">Enugu</option>
+                <option value="Federal Capital Territory">Federal Capital Territory</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Imo">Imo</option>
+                <option value="Jigawa">Jigawa</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Kano">Kano</option>
+                <option value="Katsina">Katsina</option>
+                <option value="Kebbi">Kebbi</option>
+                <option value="Kogi">Kogi</option>
+                <option value="Kwara">Kwara</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Nasarawa">Nasarawa</option>
+                <option value="Niger">Niger</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Osun">Osun</option>
+                <option value="Oyo">Oyo</option>
+                <option value="Plateau">Plateau</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Sokoto">Sokoto</option>
+                <option value="Taraba">Taraba</option>
+                <option value="Yobe">Yobe</option>
+                <option value="Zamfara">Zamfara</option>
+              </select>
+            </div>
+            <div>
+              <label for="lgaName">Local Government Area (LGA)</label>
+              <select id="lgaName" name="lgaName" disabled required>
+                <option value="">Select a state first</option>
+              </select>
+              <p class="location-status" id="locationStatus" aria-live="polite">
+                Choose a state to load its current LGAs.
+              </p>
+            </div>
+            <div>
+              <label for="cityTown">City or town</label>
+              <input id="cityTown" name="cityTown" type="text" autocomplete="address-level2" placeholder="e.g. Ikeja" required />
+            </div>
+            <div class="address-field">
+              <label for="deliveryAddress">Street address</label>
+              <textarea id="deliveryAddress" name="deliveryAddress" rows="2" autocomplete="street-address" placeholder="House or building number and street name" required></textarea>
+            </div>
+            <div class="address-field">
+              <label for="landmark">Nearby landmark <span class="optional-label">(optional)</span></label>
+              <input id="landmark" name="landmark" type="text" placeholder="e.g. opposite the community health centre" />
+            </div>
+          </div>
+
+          <div class="payment-section">
+            <h3>Payment method</h3>
+            <div class="payment-options">
+              <label><input type="radio" name="paymentMethod" value="Card" checked /> Card</label>
+              <label><input type="radio" name="paymentMethod" value="Bank transfer" /> Bank transfer</label>
+              <label><input type="radio" name="paymentMethod" value="Cash on delivery" /> Cash on delivery</label>
+            </div>
+          </div>
+
+          <div class="checkout-summary">
+            <h3>Order summary</h3>
+            <div id="checkoutSummaryRows" class="summary-text"></div>
+            <div class="summary-row">
+              <span>Delivery fee</span>
+              <strong id="checkoutDeliveryFee">₦2,800</strong>
+            </div>
+            <div class="summary-row total-row">
+              <span>Total</span>
+              <strong id="checkoutTotal">₦0</strong>
+            </div>
+          </div>
+
+          <p class="form-message" id="checkoutMessage" aria-live="polite"></p>
+          <button class="button primary wide" type="submit">Pay demo total</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
