@@ -1016,12 +1016,15 @@ main {
 }
 
 .catalog-carousel {
-  display: grid;
-  grid-auto-columns: minmax(230px, calc((100% - 3.6rem) / 4));
-  grid-auto-flow: column;
+  display: flex;
+  width: 100%;
+  min-width: 0;
   gap: 1.2rem;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -1033,6 +1036,7 @@ main {
 }
 
 .catalog-carousel .product-card {
+  flex: 0 0 calc((100% - 3.6rem) / 4);
   min-width: 0;
   scroll-snap-align: start;
 }
@@ -1176,12 +1180,15 @@ main {
 }
 
 .seller-carousel {
-  display: grid;
-  grid-auto-columns: minmax(240px, calc((100% - 2.4rem) / 3));
-  grid-auto-flow: column;
+  display: flex;
+  width: 100%;
+  min-width: 0;
   gap: 1.2rem;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -1193,6 +1200,7 @@ main {
 }
 
 .seller-card {
+  flex: 0 0 calc((100% - 2.4rem) / 3);
   min-width: 0;
   scroll-snap-align: start;
   background: rgba(255, 255, 255, 0.7);
@@ -1736,11 +1744,19 @@ main {
   }
 
   .catalog-carousel {
-    grid-auto-columns: minmax(220px, calc((100% - 2.4rem) / 3));
+    gap: 1.2rem;
+  }
+
+  .catalog-carousel .product-card {
+    flex-basis: calc((100% - 2.4rem) / 3);
   }
 
   .seller-carousel {
-    grid-auto-columns: minmax(240px, calc((100% - 1.2rem) / 2));
+    gap: 1rem;
+  }
+
+  .seller-card {
+    flex-basis: calc((100% - 1rem) / 2);
   }
 
   .category-grid {
@@ -1778,7 +1794,11 @@ main {
   }
 
   .catalog-carousel {
-    grid-auto-columns: minmax(220px, calc((100% - 1.2rem) / 2));
+    gap: 1rem;
+  }
+
+  .catalog-carousel .product-card {
+    flex-basis: calc((100% - 1rem) / 2);
   }
 
   .promo-panel,
@@ -1827,18 +1847,30 @@ main {
   }
 
   .catalog-carousel {
-    grid-auto-columns: minmax(0, 84%);
     gap: 0.9rem;
   }
 
+  .catalog-carousel .product-card {
+    flex-basis: 84%;
+  }
+
   .seller-carousel {
-    grid-auto-columns: minmax(0, 84%);
     gap: 0.9rem;
+  }
+
+  .seller-card {
+    flex-basis: 84%;
   }
 
   .split-heading {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .catalog-section .split-heading,
+  .stores-section .split-heading {
+    align-items: center;
+    flex-direction: row;
   }
 
   .order-card-header {
